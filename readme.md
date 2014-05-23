@@ -1,5 +1,5 @@
 LibraryNetwork
-==============
+--------------
 Customer "Library Network" proposes to develop a prototype application for cataloging information about the objects stored in the library (books, magazines, newspapers, etc.).
 Prototype must implement the following functionality:  
 - Adding entries to the directory.
@@ -11,7 +11,7 @@ Prototype must implement the following functionality:
 - Search all books (patents) by author's name (including those with whom he is co-author).
 
 Description of stored objects
-=============================
+-----------------------------
 ### Books
 - Title
 - Author (s)
