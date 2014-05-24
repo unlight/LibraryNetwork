@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Text.RegularExpressions;
 	
 namespace LibraryNetwork
 {
@@ -53,7 +54,12 @@ namespace LibraryNetwork
 		
 		public string Note {
 			get { return note; }
-			set { note = value; }
+			set { 
+				if (value != null && !Regex.IsMatch(value, Constants.NOTE_REGEX)) {
+					throw new ArgumentException("Note.Regex");
+				}
+				note = value; 
+			}
 		}
 	
 		

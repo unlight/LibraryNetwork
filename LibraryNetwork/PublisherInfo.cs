@@ -19,6 +19,9 @@ namespace LibraryNetwork
 				return _name;
 			}
 			set {
+				if (value != null && value.Length > Constants.PUBLISHER_MAX_LENGTH) {
+					throw new ArgumentException("PublisherInfo.Name.Length");
+				}
 				_name = value;
 			}
 		}

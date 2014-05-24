@@ -27,9 +27,10 @@ namespace LibraryNetwork
 					if (value.Length > Constants.PERSON_FIRSTNAME_MAX_LENGTH) {
 						throw new ArgumentException("FirstName.Long");
 					}
-					if (!Regex.IsMatch(value, Constants.NICE_PERSON_NAME_REGEX)) {
+					if (!Regex.IsMatch(value, Constants.NICE_NAME_REGEX)) {
 						throw new ArgumentException("FirstName is not nice name.");
 					}
+					firstName = value;
 				}
 			}
 		}
@@ -44,10 +45,11 @@ namespace LibraryNetwork
 					if (value.Length > Constants.PERSON_LASTNAME_MAX_LENGTH) {
 						throw new ArgumentException("LastName.Long");
 					}
-					if (!Regex.IsMatch(value, Constants.NICE_PERSON_NAME_REGEX)) {
+					if (!Regex.IsMatch(value, Constants.NICE_NAME_REGEX)) {
 						throw new ArgumentException("LastName is not nice name.");
 					}
 				}
+				lastName = value;
 			}
 		}
 	}

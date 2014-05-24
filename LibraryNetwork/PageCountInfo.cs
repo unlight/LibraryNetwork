@@ -20,7 +20,7 @@ namespace LibraryNetwork
 			}
 			set {
 				if (value != null && value < 0) {
-					throw new InvalidOperationException("PageCount");
+					throw new ArgumentException("PageCount.Negative");
 				}
 				_value = value;
 			}

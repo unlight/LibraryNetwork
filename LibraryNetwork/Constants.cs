@@ -26,7 +26,7 @@ namespace LibraryNetwork
         public const string NOTE_REGEX = @"^.{0,2000}$";
 
         // Cyrillic or latin chars, first char should be in upper case.
-        public const string NICE_PERSON_NAME_REGEX = @"^([A-Z][a-z]{0,}|[А-ЯЁ][а-яё]{0,})$";
+        public const string NICE_NAME_REGEX = @"^([A-Z][a-z]{0,}|[А-ЯЁ][а-яё]{0,})$";
 
         public const string COUNRTY_ABBR_REGEX = @"^([A-Z][a-z]{0,}|[А-ЯЁ][а-яё]{0,}|[А-ЯЁA-Z]{1,})$";
 
