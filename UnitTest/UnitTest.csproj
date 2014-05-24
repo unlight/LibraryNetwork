@@ -65,6 +65,7 @@
     <Compile Include="UnitBook.cs" />
     <Compile Include="CatalogRepository.cs" />
     <Compile Include="UnitItem.cs" />
+    <Compile Include="UnitPerson.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibraryNetwork\LibraryNetwork.csproj">

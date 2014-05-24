@@ -29,19 +29,19 @@ namespace UnitTest
 			new Book(LongStrting);
 		}
 		
-		[Test]
-		public void AuthorsHasOne() {
-			var item = UnitFactory.CreateBook();
-			var person = UnitFactory.CreatePerson();
-			item.AddAuthor(person);
-			Assert.IsTrue(item.IsHasAuthors());
-		}
-		
-		[Test]
-		public void AuthorsEmpty() {
-			var item = UnitFactory.CreateBook();
-			Assert.IsFalse(item.IsHasAuthors());
-		}
+//		[Test]
+//		public void AuthorsHasOne() {
+//			var item = UnitFactory.CreateBook();
+//			var person = UnitFactory.CreatePerson();
+//			item.AddAuthor(person);
+//			Assert.IsTrue(item.IsHasAuthors());
+//		}
+//		
+//		[Test]
+//		public void AuthorsEmpty() {
+//			var item = UnitFactory.CreateBook();
+//			Assert.IsFalse(item.IsHasAuthors());
+//		}
 		
 		[SetUp]
 		public void Init()
@@ -51,7 +51,6 @@ namespace UnitTest
 		[TearDown]
 		public void Dispose()
 		{
-			// TODO: Add tear down code.
 		}
 	}
 }
