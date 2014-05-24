@@ -56,7 +56,12 @@ namespace LibraryNetwork
 		
 		public string ISSN {
 			get { return issn; }
-			set { issn = value; }
+			set {
+				if (value != null && !Regex.IsMatch(value, Constants.ISSN_REGEX)) {
+					throw new InvalidOperationException("ISSN");
+				}
+				issn = value;    	
+			}
 		}
 				
 	}

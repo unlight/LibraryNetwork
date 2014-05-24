@@ -29,7 +29,7 @@ namespace LibraryNetwork
 			}
 			set {
 				if (value <= 0) {
-					throw new InvalidDataException("RegistrationNumber");
+					throw new InvalidOperationException("RegistrationNumber");
 				}
 				registrationNumber = value;
 			}
@@ -40,14 +40,30 @@ namespace LibraryNetwork
 		
 		public DateTime? DateRequested {
 			get { return dateRequested; }
-			set { dateRequested = value; }
+			set { 
+				if (value != null && DateTime.Now > value.Value) {
+					throw new InvalidOperationException("DateRequested");
+				}
+				if (value != null && value.Value > DatePublished) {
+					throw new InvalidOperationException("DateRequested");
+				}
+				dateRequested = value; 
+			}
 		}
 		
 		DateTime? datePublished;
 		
 		public DateTime? DatePublished {
 			get { return datePublished; }
-			set { datePublished = value; }
+			set {
+				if (value != null && value.Value > DateTime.Now) {
+					throw new InvalidOperationException("DatePublished");
+				}
+				if (value != null && value.Value > DateRequested) {
+					throw new InvalidOperationException("DatePublished");
+				}
+				datePublished = value; 
+			}
 		}
 		
 		public new int? Year { 

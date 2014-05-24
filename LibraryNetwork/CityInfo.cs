@@ -14,11 +14,11 @@ namespace LibraryNetwork
 			set {
 				if (value != null) {
 					if (value.Length > Constants.CITY_MAX_LENGTH) {
-						throw new Exception("City");
+						throw new InvalidOperationException("City");
 					}
 					// This shouldn't consist of a mixed characters.
 					if (!Regex.IsMatch(value, Constants.NICE_NAME_REGEX)) {
-						throw new ArgumentException("City is not nice name.");
+						throw new InvalidOperationException("City is not nice name.");
 					}
 				}
 				_value = value;

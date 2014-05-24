@@ -28,7 +28,7 @@ namespace LibraryNetwork
 			}
 		}
 		
-		public int PageCount {
+		public int? PageCount {
 			get {
 				return PageCountBehavior.PageCount;
 			}

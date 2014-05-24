@@ -11,14 +11,17 @@ namespace LibraryNetwork
 	/// </summary>
 	public class PageCountInfo : IPageCountBehavior
 	{
-		int _value;
+		int? _value;
 		
 		
-		public int PageCount {
+		public int? PageCount {
 			get {
 				return _value;
 			}
 			set {
+				if (value != null && value < 0) {
+					throw new InvalidOperationException("PageCount");
+				}
 				_value = value;
 			}
 		}

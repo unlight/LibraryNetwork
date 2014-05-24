@@ -1,3 +1,5 @@
+#### [Revision 1](#r1)
+
 LibraryNetwork
 --------------
 Customer "Library Network" proposes to develop a prototype application for cataloging information about the objects stored in the library (books, magazines, newspapers, etc.).
@@ -10,6 +12,7 @@ Prototype must implement the following functionality:
 - Search book or author's name on the patent (inventor).
 - Search all books (patents) by author's name (including those with whom he is co-author).
 
+<a name="r1"></a>
 Description of stored objects
 -----------------------------
 ### Books
@@ -42,3 +45,4 @@ Description of stored objects
 - patent date
 - Number of pages
 - Note
+

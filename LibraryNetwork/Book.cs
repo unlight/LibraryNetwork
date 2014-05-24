@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace LibraryNetwork
 {
@@ -38,7 +39,12 @@ namespace LibraryNetwork
 		
 		public string ISBN {
 			get { return isbn; }
-			set { isbn = value; }
+			set {
+				if (value != null && !Regex.IsMatch(value, Constants.ISBN_REGEX)) {
+					throw new InvalidOperationException("ISBN");
+				}
+				isbn = value;
+			}
 		}
 	}
 }

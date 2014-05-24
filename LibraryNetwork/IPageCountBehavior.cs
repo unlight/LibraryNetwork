@@ -12,6 +12,6 @@ namespace LibraryNetwork
 	public interface IPageCountBehavior
 	{
 
-		int PageCount { get; set; }
+		int? PageCount { get; set; }
 	}
 }
