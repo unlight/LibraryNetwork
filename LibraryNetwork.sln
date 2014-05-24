@@ -6,6 +6,8 @@ VisualStudioVersion = 12.0.20827.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryNetwork", "LibraryNetwork\LibraryNetwork.csproj", "{C03F1994-6017-4331-BA0E-AAD3B6DFCAB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E74B13C7-2838-47F8-AE2E-6FDF64E9C525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,5 +18,9 @@ Global
 		{C03F1994-6017-4331-BA0E-AAD3B6DFCAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C03F1994-6017-4331-BA0E-AAD3B6DFCAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C03F1994-6017-4331-BA0E-AAD3B6DFCAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74B13C7-2838-47F8-AE2E-6FDF64E9C525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74B13C7-2838-47F8-AE2E-6FDF64E9C525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74B13C7-2838-47F8-AE2E-6FDF64E9C525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74B13C7-2838-47F8-AE2E-6FDF64E9C525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

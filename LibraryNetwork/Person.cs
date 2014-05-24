@@ -9,7 +9,7 @@ namespace LibraryNetwork
 	/// <summary>
 	/// Description of Class1.
 	/// </summary>
-	internal class Person
+	public class Person
 	{
 		public Person()
 		{

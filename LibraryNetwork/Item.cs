@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Collections;
 	
 namespace LibraryNetwork
 {
-	internal abstract class Item
+	public abstract class Item
 	{
 	
 		protected IAuthorBehavior AuthorBehavior;
@@ -15,7 +16,18 @@ namespace LibraryNetwork
 			Name = name;
 		}
 	
-		public string Name { get; set; }
+		string name;
+		public string Name {
+			get {
+				return name;
+			}
+			set {
+				if (value.Length > Constants.NAME_MAX_LENGTH) {
+					throw new InvalidOperationException("Name");
+				}
+				name = value;
+			}
+		}
 	
 		public List<Person> GetAuthors()
 		{
@@ -44,5 +56,18 @@ namespace LibraryNetwork
 			set { note = value; }
 		}
 	
+		
+		public virtual void AddAuthor(Person p) {
+			AuthorBehavior.Add(p);
+		}
+		
+		public virtual bool RemoveAuthor(Person p) {
+			return AuthorBehavior.Remove(p);
+		}
+		
+		public bool IsHasAuthors() {
+			var authors = AuthorBehavior.GetAuthors();
+			return (authors != null && authors.Count > 0);
+		}
 	}
 }

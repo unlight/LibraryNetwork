@@ -7,9 +7,13 @@ using System.Collections.Generic;
 namespace LibraryNetwork
 {
 
-	interface ICatalogRepository
+	public interface ICatalogRepository
 	{
 		IEnumerable<Item> GetItems();
+		
+		void Add(Item item);
+
+		bool Remove(Item item);
 		
 		IEnumerable<Item> FindByName(string name);
 		

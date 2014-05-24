@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 namespace LibraryNetwork
 {
 	internal class NewsPaper : Item

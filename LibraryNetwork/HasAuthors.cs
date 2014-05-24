@@ -13,9 +13,9 @@ namespace LibraryNetwork
 			return this;
 		}
 
-		void IAuthorBehavior.Remove(Person p)
+		new bool Remove(Person p)
 		{
-			this.Remove(p);
+			return base.Remove(p);
 		}
 	}
 }
