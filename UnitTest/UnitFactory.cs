@@ -19,6 +19,16 @@ namespace UnitTest
 			return item;
 		}
 		
+		public static Patent CreatePatent() {
+			var item = new Patent(Guid.NewGuid().ToString());
+			return item;
+		}
+		
+		public static NewsPaper CreateNewsPaper() {
+			var item = new NewsPaper(Guid.NewGuid().ToString());
+			return item;
+		}
+		
 		public static Person CreatePerson() {
 			var item = new Person();
 			item.FirstName = Guid.NewGuid().ToString();

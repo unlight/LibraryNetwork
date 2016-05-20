@@ -2,11 +2,11 @@ using System;
 using System.Text.RegularExpressions;
 namespace LibraryNetwork
 {
-	internal class NewsPaper : Item
+	public class NewsPaper : Item
 	{
 	
 
-		internal NewsPaper(string name)
+		public NewsPaper(string name)
 			: base(name)
 		{
 			AuthorBehavior = new NoAuthors();
