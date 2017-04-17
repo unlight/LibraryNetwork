@@ -3,10 +3,10 @@ using System.Text.RegularExpressions;
 
 namespace LibraryNetwork
 {
-	internal class Book : Item
+	public class Book : Item
 	{
 	
-		internal Book(string name)
+		public Book(string name)
 			: base(name)
 		{
 			AuthorBehavior = new HasAuthors();

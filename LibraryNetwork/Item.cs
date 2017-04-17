@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Text.RegularExpressions;
 	
 namespace LibraryNetwork
 {
-	internal abstract class Item
+	public abstract class Item
 	{
 	
 		protected IAuthorBehavior AuthorBehavior;
@@ -15,7 +17,18 @@ namespace LibraryNetwork
 			Name = name;
 		}
 	
-		public string Name { get; set; }
+		string name;
+		public string Name {
+			get {
+				return name;
+			}
+			set {
+				if (value.Length > Constants.NAME_MAX_LENGTH) {
+					throw new InvalidOperationException("Name");
+				}
+				name = value;
+			}
+		}
 	
 		public List<Person> GetAuthors()
 		{
@@ -41,8 +54,26 @@ namespace LibraryNetwork
 		
 		public string Note {
 			get { return note; }
-			set { note = value; }
+			set { 
+				if (value != null && !Regex.IsMatch(value, Constants.NOTE_REGEX)) {
+					throw new ArgumentException("Note.Regex");
+				}
+				note = value; 
+			}
 		}
 	
+		
+		public virtual void AddAuthor(Person p) {
+			AuthorBehavior.Add(p);
+		}
+		
+		public virtual bool RemoveAuthor(Person p) {
+			return AuthorBehavior.Remove(p);
+		}
+		
+		public bool IsHasAuthors() {
+			var authors = AuthorBehavior.GetAuthors();
+			return (authors != null && authors.Count > 0);
+		}
 	}
 }

@@ -8,8 +8,9 @@ namespace LibraryNetwork
 		{
 		}
 
-		public void Remove(Person p)
+		public bool Remove(Person p)
 		{
+			return false;
 		}
 
 		public List<Person> GetAuthors()

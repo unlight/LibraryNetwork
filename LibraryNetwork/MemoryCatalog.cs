@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace LibraryNetwork
 {
-	internal class MemoryCatalog : List<Item>, ICatalogRepository
+	public class MemoryCatalog : List<Item>, ICatalogRepository
 	{
 		public MemoryCatalog()
 		{

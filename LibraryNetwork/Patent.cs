@@ -3,7 +3,7 @@ using System.IO;
 	
 namespace LibraryNetwork
 {
-	internal class Patent : Item
+	public class Patent : Item
 	{
 	
 		public Patent(string name)

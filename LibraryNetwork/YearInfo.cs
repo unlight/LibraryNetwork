@@ -23,6 +23,9 @@ namespace LibraryNetwork
 				return year;
 			}
 			set {
+				if (value != null && value.Value > DateTime.Now.Year) {
+					throw new ArgumentException("YearInfo.Value.Now");
+				}
 				year = value;
 			}
 				
